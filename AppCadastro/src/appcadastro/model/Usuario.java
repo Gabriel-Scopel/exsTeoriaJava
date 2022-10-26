@@ -4,6 +4,10 @@
  */
 package appcadastro.model;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 /**
  *
  * @author osjunior
@@ -79,8 +83,9 @@ public class Usuario {
         this.idade = idade;
     }
 
-    public boolean cadastra() {
-        // Complete aqui o método
+    public boolean cadastra() throws IOException {
+        FileWriter arquivo = new FileWriter("cadastro.txt");
+        PrintWriter escrivaArquivo = new PrintWriter(arquivo);
         return true;
     }
 }
