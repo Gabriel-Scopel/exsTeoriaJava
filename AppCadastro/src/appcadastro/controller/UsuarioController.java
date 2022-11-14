@@ -6,6 +6,7 @@ package appcadastro.controller;
 
 import appcadastro.view.FrmUsuario;
 import appcadastro.model.Usuario;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,7 +21,7 @@ public class UsuarioController {
         this.janela = view;
     }
 
-    public void cadastraUsuario() {
+    public void cadastraUsuario() throws IOException {
         String nome = this.janela.getTxtNome().getText();
         String sobrenome = this.janela.getTxtSobrenome().getText();
         String email = this.janela.getTxtEmail().getText();
